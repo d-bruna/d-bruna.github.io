@@ -345,7 +345,7 @@ function CaseStudy({ project, onClose }) {
             <span><b>Year</b>{project.year}</span>
             <span><b>Stack</b>{project.stack}</span>
           </div>
-          <Placeholder className="cs-hero-ph" sub="screenshot" label={project.hero_ph} />
+          {project.hero_ph && <Placeholder className="cs-hero-ph" sub="screenshot" label={project.hero_ph} />}
           {project.blocks.map((b, i) => (
             <div className="cs-block" key={i}>
               <h4>{b.h}</h4>
