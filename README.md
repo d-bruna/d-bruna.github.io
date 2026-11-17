@@ -1,17 +1,17 @@
-# Daniel García Bruña · Portfolio
+# d-bruna.github.io
 
-Personal portfolio site. Econometrics, applied mathematics, and quantitative machine learning.
+Personal site of Daniel García Bruña. Plain static HTML, CSS and JavaScript: no build step, no framework, no tracking.
 
-Static site, no build step. Open `index.html` locally or deploy to any static host (GitHub Pages, Netlify, Vercel).
+## Layout
+- `index.html`: all copy
+- `assets/css/site.css`: styles (research-terminal direction; amber is the only accent)
+- `assets/js/site.js`: scroll-driven figures and the hero terminal
+- `assets/data/ipo.json`: day-one and one-year excess returns for the 881 IPOs (from `ipo-performance-prediction`)
+- `assets/fonts/`: Archivo, JetBrains Mono, Source Serif 4 (SIL OFL, licences included)
+- `Daniel-Garcia-Bruna-CV.pdf`
 
-## Deploy on GitHub Pages
-1. Push these files to the repository root.
-2. Settings → Pages → Source: "Deploy from a branch" → Branch: `main` / `/ (root)`.
-3. Live at `https://d-bruna.github.io/`.
+## Figures
+Figures 2, 4 and 6 use real project results (IPO sample, DML coverage from the paper's Fig. 1, qcml benchmark). Figures 0, 1, 3, 5 and 7 are schematic and say so in their captions.
 
-## Structure
-- `index.html` — entry point
-- `styles.css` — design system (themes, vibes, 3D depth)
-- `content.js` — all site copy and project data
-- `app.jsx` / `components.jsx` / `heroviz.jsx` / `interactions.jsx` — UI, hero visual, 3D interactions
-- `assets/` — portrait and images
+## Local preview
+`python3 -m http.server` in this folder, then open http://localhost:8000 (the IPO figure loads its data with fetch, so opening the file directly will not show it).

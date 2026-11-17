@@ -1,39 +1,168 @@
-<!-- Last updated: 2026-06-04 v2 -->
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-vibe="aurora">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel García Bruna · Applied Math & Machine Learning</title>
-  <meta name="description" content="Daniel García Bruna, applied mathematician with an econometrics background, building machine-learning systems at the edge of quantum computation." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;1,18..72,400;1,18..72,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <template id="__bundler_thumbnail">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <rect width="100" height="100" fill="#1b1d2b"/>
-      <text x="50" y="46" font-family="monospace" font-size="26" font-weight="600" fill="#9b8cff" text-anchor="middle">DGB</text>
-      <line x1="34" y1="60" x2="66" y2="60" stroke="#9b8cff" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </template>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel García Bruña · quantitative research and machine learning</title>
+<meta name="description" content="Daniel García Bruña: econometrician and applied mathematics student at TU Delft, building models for decisions made under uncertainty. Quantitative research, causal ML, forecasting and ML systems.">
+<meta name="author" content="Daniel García Bruña">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://d-bruna.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://d-bruna.github.io/">
+<meta property="og:title" content="Daniel García Bruña · pricing what you can't know yet">
+<meta property="og:description" content="Models for decisions made before the uncertainty clears. Quant research, causal ML, forecasting, ML systems.">
+<meta property="og:image" content="https://d-bruna.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Archivo.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/JBM.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Daniel García Bruña","url":"https://d-bruna.github.io/","email":"mailto:garciabrunadaniel@gmail.com","affiliation":{"@type":"CollegeOrUniversity","name":"TU Delft"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Erasmus University Rotterdam"}],"sameAs":["https://github.com/d-bruna","https://www.linkedin.com/in/danielgarciabruna/"]}</script>
 </head>
 <body>
-  <div id="root"></div>
+<a class="skip" href="#story">Skip to the story</a>
 
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<header class="cmd">
+ <a class="in" href="#top" aria-label="Back to top">DGB &lt;RESEARCH&gt; GO</a>
+ <nav aria-label="Sections">
+  <a href="#story"><b>F1</b>STORY</a><a href="#work"><b>F2</b>WORK</a><a href="Daniel-Garcia-Bruna-CV.pdf"><b>F3</b>CV.PDF</a><a href="#contact"><b>F4</b>CONTACT</a>
+ </nav>
+</header>
 
-  <script src="image-slot.js"></script>
-  <script src="content.js"></script>
-  <script type="text/babel" src="tweaks-panel.jsx"></script>
-  <script type="text/babel" src="components.jsx"></script>
-  <script type="text/babel" src="heroviz.jsx"></script>
-  <script type="text/babel" src="interactions.jsx"></script>
-  <script type="text/babel" src="app.jsx"></script>
+<main>
+<section class="hero" id="top">
+ <div>
+  <div class="term" id="term" aria-hidden="true"></div>
+  <p class="sr">Daniel García Bruña, based in Delft. Focus: quantitative research and ML research engineering. Now a research assistant at TU Delft and a data science intern at Fugro.</p>
+  <h1>Pricing what<br>you can't know <em>yet.</em></h1>
+  <p class="lede">I build models for <b>decisions taken before the uncertainty clears</b>, and I care whether the evidence behind them holds up. Econometrician by training, applied mathematics student at TU Delft, working towards <b>quantitative research and ML research engineering</b>.</p>
+ </div>
+ <aside class="who" aria-label="Profile">
+  <div class="panel-hd"><span><b>DES</b> Description</span><span>1-bit</span></div>
+  <canvas id="dither" width="200" height="200" role="img" aria-label="Portrait of Daniel García Bruña, rendered as a one-bit dither"></canvas>
+  <dl>
+   <dt>Now</dt><dd>Research assistant · TU Delft</dd>
+   <dt></dt><dd>Data science intern · Fugro</dd>
+   <dt>Study</dt><dd>Pre-master Applied Mathematics · TU Delft</dd>
+   <dt>Before</dt><dd>Quantitative analyst intern · ASML</dd>
+   <dt>Degrees</dt><dd>BSc Econometrics &amp; OR, Erasmus · 2:1<br>BSc Int. Business, RSM · First Class</dd>
+   <dt>Lang</dt><dd>Spanish · English · German</dd>
+  </dl>
+ </aside>
+</section>
+
+<section class="story" id="story" aria-label="The story, chapter by chapter">
+ <nav class="rail" id="rail" aria-label="Chapters"><div class="t">Session log</div></nav>
+
+ <div class="steps" id="steps">
+  <article class="step" data-t="the question">
+   <div class="k">00 · Rotterdam, 2022 to 2026</div>
+   <h2>Is the relationship real?</h2>
+   <p>I started in business at RSM and kept wanting to see the model behind each slide. So I took on a second degree, <b>Econometrics and Operations Research at Erasmus</b>, with a minor in computer science.</p>
+   <p>It left me with a habit that shapes everything since: <b>estimate, then ask how wrong the estimate could be.</b></p>
+   <div class="cell"><div class="in">In [1]: <i>fit</i>(y ~ x, se="HC3")</div><div class="out">slope with a 95% band · residuals checked before the result is trusted</div></div>
+  </article>
+
+  <article class="step" data-t="markets">
+   <div class="k">01 · Trading competitions, 2025</div>
+   <h2>Quote first, learn later</h2>
+   <p>A market maker posts a bid and an ask before knowing where the price goes next. At the <b>Optiver hackathon</b> I built a market-making strategy for one product traded across two correlated markets and finished <b>top three</b>.</p>
+   <p>In <b>IMC Prosperity</b> I built and tested strategies for market making, option mispricing, arbitrage and mean reversion over three weeks.</p>
+   <div class="cell"><div class="in">In [2]: <i>leaderboard</i>("IMC Prosperity 2025")</div><div class="out"><span class="g">#4</span> in the Netherlands · <span class="g">#103</span> of 5,000 globally · withdrew for exams</div></div>
+  </article>
+
+  <article class="step" data-t="IPO horizons">
+   <div class="k">02 · Machine learning, Erasmus, 2025</div>
+   <h2>Day one is not year one</h2>
+   <p>With three co-authors I classified <b>881 US IPOs</b> by whether they beat the S&amp;P 500, at a one-day and a one-year horizon, using four models and 18 pre-IPO features.</p>
+   <p>In our sample three in four IPOs beat the index on day one; after a year fewer than half did. The features that matter flip too: <b>offer price drops from rank 1 to rank 8</b>, profit margin climbs from 6 to 2, and institutional ownership is the only feature that stays important at both horizons.</p>
+   <div class="cell"><div class="in">In [3]: <i>best</i>(models, horizon=["1d","1y"])</div><div class="out">1d gradient boosting · acc 70.3% · AUC 0.654 &nbsp;|&nbsp; 1y random forest · acc 65.4% · AUC 0.691</div></div>
+   <div class="links"><a href="https://github.com/d-bruna/ipo-performance-prediction">code + paper ↗</a></div>
+  </article>
+
+  <article class="step" data-t="volatility">
+   <div class="k">03 · Hybrid LSTM volatility, 2025</div>
+   <h2>Forecasting the risk itself</h2>
+   <p>I combined <b>GARCH-type components with HAR-RV and VIX features</b> inside LSTM architectures in PyTorch to forecast volatility at several horizons.</p>
+   <p>The hybrids were benchmarked against standalone GARCH-family and HAR models across assets and market regimes, using <b>rolling-window significance tests</b> rather than a single lucky split.</p>
+   <div class="cell"><div class="in">In [4]: <i>compare</i>(hybrid, [GARCH, HAR], window="rolling")</div><div class="out">loss differentials tested per regime, not averaged away</div></div>
+  </article>
+
+  <article class="step" data-t="causal ML">
+   <div class="k">04 · Research, Erasmus School of Economics, 2026</div>
+   <h2>When orthogonality fails to protect</h2>
+   <p>Double Machine Learning promises that first-stage ML error won't contaminate a causal estimate. We tested that promise with a <b>648-cell Monte Carlo study</b>, about 63 hours of compute, plus FRED-MD and Barro-Lee experiments.</p>
+   <p>Under dense, weak signals, Lasso-based DML coverage <b>collapses to 35%</b> while Ridge holds 69%, and <b>more data widens the gap</b>, from 9 points at n = 300 to 34 at n = 1,000. Comparing out-of-fold R² from both learners flags the risk before you trust an estimate.</p>
+   <div class="cell"><div class="in">In [5]: <i>coverage</i>(dml, learner=["lasso","ridge"], tau=0.1, n=1000)</div><div class="out">nominal 0.95 · lasso <span class="r">0.35</span> · ridge <span class="g">0.69</span></div></div>
+   <div class="links"><a href="https://github.com/d-bruna/orthogonality-dml">paper + code ↗</a></div>
+  </article>
+
+  <article class="step" data-t="ASML">
+   <div class="k">05 · Quantitative analyst intern, ASML, 2026</div>
+   <h2>A €2M decision, simulated</h2>
+   <p>Does a workforce-training programme pay off when demand, productivity and learning curves are all uncertain? I built <b>stochastic decision models</b> and a modular Python engine for scenarios, sensitivity analysis and cost comparisons.</p>
+   <p>Management and finance used the Streamlit dashboard and analyses to support a <b>€2M+ training investment decision</b>.</p>
+   <div class="cell"><div class="in">In [6]: <i>simulate</i>(roi, draws=10_000)</div><div class="out">a distribution of outcomes, not a single NPV</div></div>
+  </article>
+
+  <article class="step" data-t="ML systems">
+   <div class="k">06 · ML benchmarking platform, 2026</div>
+   <h2>Infrastructure that keeps you honest</h2>
+   <p>One shared interface for classical and quantum models: <b>train, track in MLflow, distribute with Ray, serve with FastAPI</b>, packaged in Docker. Any model swaps in without touching the pipeline.</p>
+   <p>The benchmark layer runs cross-validation, significance tests and noise sweeps. Its verdict on the test problem: <b>classical models still win, and the reasons are well understood.</b> Caching quantum-kernel evaluations mattered more than parallelising them.</p>
+   <div class="cell"><div class="in">In [7]: <i>kernel</i>.gram(X, cache="warm")</div><div class="out">3.43 s → 0.024 s · <span class="g">141×</span> faster than a cold cache</div></div>
+   <div class="links"><a href="https://github.com/d-bruna/qcml">code + results ↗</a></div>
+  </article>
+
+  <article class="step" data-t="now">
+   <div class="k">07 · Now · TU Delft and Fugro</div>
+   <h2>Accept the booking, or hold capacity?</h2>
+   <p>As a research assistant at TU Delft I'm working on <b>network revenue management for an asset-light freight platform</b>. The platform owns no trucks, trains or barges; it buys capacity from carriers and decides which shipper requests to accept across modes.</p>
+   <p>A profitable request now can be the wrong call if it uses capacity that a better request needs later. That <b>opportunity cost of capacity</b> is what we study. Alongside it I build forecasting and MLflow workflows at <b>Fugro</b>.</p>
+   <div class="cell"><div class="in">In [8]: accept(req) if req.revenue ≥ Σ <i>bid_price</i>[leg]</div><div class="out">early-stage research · more here as it develops</div></div>
+  </article>
+ </div>
+
+ <figure class="fig" id="fig">
+  <div class="panel-hd"><span id="fighd"><b>FIG</b></span><span>scroll ▸ replay</span></div>
+  <svg id="sv" viewBox="0 0 760 560" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cap"></svg>
+  <figcaption class="cap" id="cap"></figcaption>
+ </figure>
+</section>
+
+<section class="sec" id="work" aria-labelledby="work-h">
+ <h2 class="prompt" id="work-h"><b>$</b> ls -l ~/work --sort=time</h2>
+ <table class="ls">
+  <thead><tr><th>date</th><th>name</th><th>what it is</th><th>stack</th></tr></thead>
+  <tbody>
+  <tr><td class="m">2026-11</td><td class="nm">freight-nrm/</td><td class="d">Network revenue management for an asset-light multimodal freight platform. Research assistant, TU Delft.</td><td class="m">research · ongoing</td></tr>
+  <tr><td class="m">2026-10</td><td class="nm">fugro/</td><td class="d">Forecasting and statistical models for KPI tracking, financial planning and operational performance.</td><td class="m">Fabric · Databricks · MLflow</td></tr>
+  <tr><td class="m">2026-06</td><td class="nm">asml-roi-engine/</td><td class="d">Stochastic ROI models and a decision engine behind a €2M+ training investment.</td><td class="m">Python · Streamlit</td></tr>
+  <tr><td class="m">2026-05</td><td class="nm"><a href="https://github.com/d-bruna/qcml">qcml/ ↗</a></td><td class="d">Train, track, serve and benchmark classical and quantum models behind one interface.</td><td class="m">PyTorch · Ray · MLflow · FastAPI</td></tr>
+  <tr><td class="m">2026-04</td><td class="nm"><a href="https://github.com/d-bruna/orthogonality-dml">orthogonality-dml/ ↗</a></td><td class="d">When does Neyman orthogonality fail to protect DML? Ridge vs Lasso as nuisance estimators. With R. Gosselaar, J. Hu and E. Moyson.</td><td class="m">Python · scikit-learn</td></tr>
+  <tr><td class="m">2025-10</td><td class="nm"><a href="https://github.com/d-bruna/ipo-performance-prediction">ipo-performance/ ↗</a></td><td class="d">Which pre-IPO attributes predict beating the S&amp;P 500, and how that changes from day one to year one. With C. Pearce, L. Stomps and J. Hu.</td><td class="m">scikit-learn · boosting · RF</td></tr>
+  <tr><td class="m">2025</td><td class="nm">sku-forecasting/</td><td class="d">High-dimensional demand forecasting across hundreds of SKUs and horizons, with rolling-origin cross-validation.</td><td class="m">elastic net · time series</td></tr>
+  <tr><td class="m">2025</td><td class="nm">hybrid-lstm-vol/</td><td class="d">LSTM with GARCH, HAR-RV and VIX features for multi-horizon volatility forecasting.</td><td class="m">PyTorch</td></tr>
+  <tr><td class="m">2025</td><td class="nm">trading/</td><td class="d">Optiver hackathon, top three. IMC Prosperity, 4th in NL and 103rd of 5,000.</td><td class="m">Python</td></tr>
+  </tbody>
+ </table>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+ <div class="prompt"><b>$</b> mail daniel</div>
+ <h2 id="contact-h">Get in touch.<br><a href="mailto:garciabrunadaniel@gmail.com">garciabrunadaniel@gmail.com</a></h2>
+ <div class="row">
+  <a href="https://github.com/d-bruna"><b>GH</b>github.com/d-bruna</a>
+  <a href="https://www.linkedin.com/in/danielgarciabruna/"><b>IN</b>linkedin.com/in/danielgarciabruna</a>
+  <a href="Daniel-Garcia-Bruna-CV.pdf"><b>CV</b>one-page PDF</a>
+ </div>
+ <p class="foot">© 2026 Daniel García Bruña · static HTML, no tracking · charts marked illustrative are schematic; the rest use the projects' own results.</p>
+</section>
+</main>
+
+<div class="status" aria-hidden="true"><span class="mode">NORMAL</span><span id="stsec">dgb · top</span><span class="pos"><span class="meter"><i id="stbar"></i></span><span id="stpct">0%</span></span><span class="loc">utf-8 · 52.0°N 4.4°E</span></div>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
