@@ -142,3 +142,14 @@ h1 em{font-style:normal;color:var(--amber)}
   .status .meter,.status .loc{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ---- privacy: static portrait, click-to-reveal email ---- */
+.who .portrait{display:block;width:100%;height:auto;aspect-ratio:1/1;image-rendering:pixelated;background:#000}
+.reveal{margin-top:26px;font-size:clamp(20px,3.6vw,48px);font-family:var(--disp);font-stretch:70%;font-weight:700}
+.reveal button{all:unset;cursor:pointer;font-family:var(--mono);font-size:15px;font-weight:600;color:#000;background:var(--amber);padding:10px 16px}
+.reveal button:hover{background:var(--paper)}
+.reveal button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.reveal a{color:var(--amber);text-decoration:none;border-bottom:3px solid var(--amber-d);overflow-wrap:anywhere}
+.contact .row .na{color:var(--grey)}
+.contact .row .na b{color:var(--amber);font-weight:600;margin-right:6px}
+.reveal button[hidden]{display:none}

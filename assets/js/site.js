@@ -315,18 +315,16 @@
     }
   })();
 
-  /* ---------- dithered portrait (Floyd–Steinberg, amber on black) ---------- */
+
+  /* ---------- email: not in the page source; assembled only when a visitor clicks ---------- */
   (function () {
-    var c = document.getElementById("dither"); if (!c) return; var x = c.getContext("2d"), im = new Image();
-    im.onload = function () {
-      var W = c.width, H = c.height; x.drawImage(im, 0, 0, W, H);
-      var d = x.getImageData(0, 0, W, H), px = d.data, L = new Float32Array(W * H), i, X, y;
-      for (i = 0; i < W * H; i++) { L[i] = Math.pow((px[i * 4] * .3 + px[i * 4 + 1] * .59 + px[i * 4 + 2] * .11) / 255, .85) * 1.12 - .04; }
-      for (y = 0; y < H; y++) for (X = 0; X < W; X++) { i = y * W + X; var o = L[i], n = o > .5 ? 1 : 0, e = o - n; L[i] = n; if (X + 1 < W) L[i + 1] += e * 7 / 16; if (y + 1 < H) { if (X) L[i + W - 1] += e * 3 / 16; L[i + W] += e * 5 / 16; if (X + 1 < W) L[i + W + 1] += e / 16; } }
-      for (i = 0; i < W * H; i++) { var on = L[i] > .5; px[i * 4] = on ? 245 : 10; px[i * 4 + 1] = on ? 166 : 10; px[i * 4 + 2] = on ? 35 : 10; px[i * 4 + 3] = 255; }
-      x.putImageData(d, 0, 0);
-    };
-    im.src = "assets/img/daniel.jpg";
+    var b = document.getElementById("mailBtn"), out = document.getElementById("mailOut"); if (!b) return;
+    var k = [116, 118, 106, 53, 115, 112, 104, 116, 110, 71, 115, 108, 112, 117, 104, 107, 104, 117, 124, 121, 105, 104, 112, 106, 121, 104, 110];
+    b.addEventListener("click", function () {
+      var a = k.slice().reverse().map(function (c) { return String.fromCharCode(c - 7); }).join("");
+      var l = document.createElement("a"); l.href = "mai" + "lto:" + a; l.textContent = a;
+      out.innerHTML = ""; out.appendChild(l); b.hidden = true;
+    });
   })();
 
   update();

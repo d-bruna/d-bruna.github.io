@@ -8,7 +8,7 @@ Personal site of Daniel García Bruña. Plain static HTML, CSS and JavaScript: n
 - `assets/js/site.js`: scroll-driven figures and the hero terminal
 - `assets/data/ipo.json`: day-one and one-year excess returns for the 881 IPOs (from `ipo-performance-prediction`)
 - `assets/fonts/`: Archivo, JetBrains Mono, Source Serif 4 (SIL OFL, licences included)
-- `Daniel-Garcia-Bruna-CV.pdf`
+- `robots.txt`: opts out of AI crawlers; the CV is available on request rather than published
 
 ## Figures
 Figures 2, 4 and 6 use real project results (IPO sample, DML coverage from the paper's Fig. 1, qcml benchmark). Figures 0, 1, 3, 5 and 7 are schematic and say so in their captions.
